@@ -1,0 +1,32 @@
+.pagination-control-buttons-container {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.pagination-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  color: #fc4747;
+  border: 1px solid #fc4747;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+.pagination-control-button:hover {
+  filter: brightness(0.8);
+}
+.pagination-control-button:disabled {
+  filter: brightness(0.6);
+}
+@media (min-width: 768px) {
+  .pagination-control-buttons-container {
+    gap: 48px;
+  }
+}
