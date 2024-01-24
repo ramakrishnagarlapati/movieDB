@@ -1,4 +1,3 @@
-import {LuDot} from 'react-icons/lu'
 import {withRouter} from 'react-router-dom'
 import './index.css'
 
@@ -14,7 +13,6 @@ const MovieCard = props => {
       <img src={imageUrl} alt="movie" className="movie-image" />
       <div className="movie-name-and-rating-wrapper">
         <p className="movie-card-name">{originalTitle}</p>
-        <LuDot />
         <p className="movie-card-rating">Rating: {rating}</p>
       </div>
       <button className="view-button" type="button" onClick={onClickViewBtn}>

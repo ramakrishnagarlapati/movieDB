@@ -1,7 +1,5 @@
 import {useState, useEffect, useContext} from 'react'
 import {useParams} from 'react-router-dom'
-import {FaStar} from 'react-icons/fa'
-import {LuDot} from 'react-icons/lu'
 
 import Navbar from '../../components/Navbar'
 import {
@@ -79,7 +77,6 @@ const MovieDetails = () => {
             </div>
             <div className="duration-and-release-date">
               <p className="duration">{runtime} Mins</p>
-              <LuDot />
               <p className="release-date">{releaseDate}</p>
             </div>
             <div className="genres-container">

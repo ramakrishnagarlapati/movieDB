@@ -1,6 +1,3 @@
-import {MdNavigateNext} from 'react-icons/md'
-import {GrFormPrevious} from 'react-icons/gr'
-
 import './index.css'
 
 const Pagination = ({onClickNextBtn, onClickPreviousBtn, pageNumber}) => (
@@ -11,16 +8,14 @@ const Pagination = ({onClickNextBtn, onClickPreviousBtn, pageNumber}) => (
       onClick={onClickPreviousBtn}
       disabled={pageNumber === 1}
     >
-      <GrFormPrevious />
-      <span className="btn-text">Previous</span>
+      Previous
     </button>
     <button
       type="button"
       className="pagination-control-button"
       onClick={onClickNextBtn}
     >
-      <span className="btn-text">Next</span>
-      <MdNavigateNext />
+      Next
     </button>
   </div>
 )

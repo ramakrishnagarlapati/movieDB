@@ -1,6 +1,5 @@
 import {useState, useEffect, useContext} from 'react'
 import {withRouter, Link} from 'react-router-dom'
-import {CiSearch} from 'react-icons/ci'
 
 import {searchContext} from '../../context/searchContext'
 
@@ -31,12 +30,12 @@ const Navbar = props => {
             </li>
             <li className="nav-item">
               <Link to="/top-rated" className="nav-link">
-                <h2 className="nav-link-text"> Top Rated</h2>
+                <h2 className="nav-link-text">Top Rated</h2>
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/upcoming" className="nav-link">
-                <h2 className="nav-link-text"> Upcoming</h2>
+                <h2 className="nav-link-text">Upcoming</h2>
               </Link>
             </li>
           </ul>

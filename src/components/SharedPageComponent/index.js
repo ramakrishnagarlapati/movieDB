@@ -1,7 +1,5 @@
 import {useState, useEffect, useContext} from 'react'
 
-import {FcPrevious} from 'react-icons/fc'
-
 import Navbar from '../Navbar'
 import Loader from '../Loader'
 import {searchContext} from '../../context/searchContext'
