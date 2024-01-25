@@ -4,7 +4,7 @@ import './index.css'
 const MovieCard = props => {
   const {movieDetails, history} = props
   const {id, originalTitle, overview, posterPath, rating} = movieDetails
-  const imageUrl = `https://image.tmdb.org/t/p/w500/${posterPath}`
+  const imageUrl = `https://image.tmdb.org/t/p/w500${posterPath}`
   const onClickViewBtn = () => {
     history.push(`/movies/${id}`)
   }

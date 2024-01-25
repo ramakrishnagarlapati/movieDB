@@ -66,7 +66,7 @@ const MovieDetails = () => {
       <>
         <div className="movie-details-container">
           <img
-            src={`https://image.tmdb.org/t/p/w500/${posterPath}`}
+            src={`https://image.tmdb.org/t/p/w500${posterPath}`}
             alt="movie poster"
             className="movie-poster"
           />
@@ -105,7 +105,7 @@ const MovieDetails = () => {
                   <img
                     className="cast-image"
                     alt="movie cast"
-                    src={`https://image.tmdb.org/t/p/w500/${profilePath}`}
+                    src={`https://image.tmdb.org/t/p/w500${profilePath}`}
                   />
                   <p className="cast-name">{name}</p>
                   <p className="character-name">

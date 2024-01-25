@@ -34,7 +34,7 @@
   color: #fc4747;
 }
 .search-form {
-  display: none;
+  display: hidden;
 }
 .mobile-search-bar {
   width: 90%;

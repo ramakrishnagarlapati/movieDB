@@ -11,10 +11,8 @@ const Navbar = props => {
   const {history} = props
   const onFormSubmit = e => {
     e.preventDefault()
-    if (inputValue !== '') {
-      setSearchValue(inputValue)
-      history.push('/search')
-    }
+    setSearchValue(inputValue)
+    history.push('/search')
   }
 
   return (
@@ -39,9 +37,9 @@ const Navbar = props => {
               </Link>
             </li>
           </ul>
-          <form onSubmit={onFormSubmit} className="search-form">
+          <form className="search-form" onSubmit={onFormSubmit}>
             <input
-              type="search"
+              type="text"
               value={inputValue}
               onChange={e => setInputValue(e.target.value)}
               placeholder="Search"
@@ -53,22 +51,23 @@ const Navbar = props => {
           </form>
         </nav>
       </header>
-      <div className="mobile-search-bar">
-        <form onSubmit={onFormSubmit} className="mobile-search-form">
-          <input
-            type="search"
-            value={inputValue}
-            onChange={e => setInputValue(e.target.value)}
-            placeholder="Search"
-            className="mobile-search-input"
-          />
-          <button type="submit" className="mobile-search-button">
-            Search
-          </button>
-        </form>
-      </div>
     </div>
   )
 }
 
 export default withRouter(Navbar)
+
+//   <div className="mobile-search-bar">
+//     <form onSubmit={onFormSubmit} className="mobile-search-form">
+//       <input
+//         type="search"
+//         value={inputValue}
+//         onChange={e => setInputValue(e.target.value)}
+//         placeholder="Search"
+//         className="mobile-search-input"
+//       />
+//       <button type="submit" className="mobile-search-button">
+//         Search
+//       </button>
+//     </form>
+//   </div>
