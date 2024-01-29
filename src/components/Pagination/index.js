@@ -6,6 +6,7 @@ const Pagination = ({onClickNextBtn, onClickPreviousBtn, pageNumber}) => (
       type="button"
       className="pagination-control-button"
       onClick={onClickPreviousBtn}
+      disabled={pageNumber === 1}
     >
       Prev
     </button>

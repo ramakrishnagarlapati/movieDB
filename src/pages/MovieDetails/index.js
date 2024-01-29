@@ -25,7 +25,7 @@ const MovieDetails = () => {
     setSingleMovieDetails({
       id: movieData.id,
       posterPath: movieData.poster_path,
-      originalTitle: movieData.original_title,
+      originalTitle: movieData.title,
       runtime: movieData.runtime,
       rating: movieData.vote_average,
       releaseDate: movieData.release_date,
@@ -36,11 +36,10 @@ const MovieDetails = () => {
       `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`,
     )
     const movieCastData = await movieCastDetailsResponse.json()
-    console.log(movieCastData.cast)
     setMovieCastDetails(
       movieCastData.cast.map(item => ({
         id: item.id,
-        name: item.original_name,
+        name: item.name,
         character: item.character,
         profilePath: item.profile_path,
       })),

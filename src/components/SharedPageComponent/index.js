@@ -19,15 +19,16 @@ const SharedPageComponent = ({pathName}) => {
   const [apiStatus, setApiStatus] = useState(apiStatusConstants.initial)
   const [pageNumber, setPageNumber] = useState(1)
   const {searchValue, setSearchValue} = useContext(searchContext)
-  let url = ''
-  if (pathName !== 'search') {
-    url = `https://api.themoviedb.org/3/movie/${pathName}?api_key=${API_KEY}&language=en-US&page=${pageNumber}`
-  } else {
-    url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchValue}&page=${pageNumber}`
-  }
 
   const getMoviesData = async () => {
     setApiStatus(apiStatusConstants.inProgress)
+
+    let url = ''
+    if (pathName !== 'search') {
+      url = `https://api.themoviedb.org/3/movie/${pathName}?api_key=${API_KEY}&language=en-US&page=${pageNumber}`
+    } else {
+      url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchValue}&page=${pageNumber}`
+    }
 
     const response = await fetch(url)
     const data = await response.json()

@@ -9,7 +9,7 @@ export const apiStatusConstants = {
 
 export const convertResponseObject = object => ({
   id: object.id,
-  originalTitle: object.original_title,
+  originalTitle: object.title,
   overview: object.overview,
   posterPath: object.poster_path,
   rating: object.vote_average,

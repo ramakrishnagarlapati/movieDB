@@ -9,10 +9,14 @@ const Navbar = props => {
   const {setSearchValue} = useContext(searchContext)
   const [inputValue, setInputValue] = useState('')
   const {history} = props
-  const onFormSubmit = e => {
-    e.preventDefault()
+  const onClickSearchBtn = () => {
     setSearchValue(inputValue)
     history.push('/search')
+  }
+
+  const onFormSubmit = e => {
+    e.preventDefault()
+    onClickSearchBtn()
   }
 
   return (
@@ -23,7 +27,7 @@ const Navbar = props => {
           <ul className="nav-list">
             <li className="nav-item">
               <Link to="/" className="nav-link">
-                <h2 className="nav-link-text">Popular</h2>
+                <h1 className="nav-link-text">Popular</h1>
               </Link>
             </li>
             <li className="nav-item">
@@ -45,7 +49,11 @@ const Navbar = props => {
               placeholder="Search"
               className="search-input"
             />
-            <button type="submit" className="search-button">
+            <button
+              type="submit"
+              className="search-button"
+              onClick={onClickSearchBtn}
+            >
               Search
             </button>
           </form>
