@@ -92,9 +92,6 @@ const SharedPageComponent = ({pathName}) => {
     <div className="movie-page">
       <Navbar />
       <main className="movie-page-content">
-        <h2 className="movie-page-heading">
-          {pathName[0].toUpperCase() + pathName.slice(1).toLowerCase()}
-        </h2>
         <div className="movie-page-movies-container">
           {renderViewBasedOnAPI()}
         </div>
